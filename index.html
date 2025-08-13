@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Daily Minimal – 3분 요약 & 오늘의 체크리스트</title>
+  <title>Daily Minimal – 3분 체크리스트</title>
   <meta name="description" content="광고 티 없이 핵심만. 오늘 바로 실행 가능한 체크리스트와 가이드를 3분 요약으로 제공합니다." />
   <link rel="canonical" href="https://example.netlify.app/" />
 
-  <!-- Preconnect/Hint: SNS 인앱 브라우저 로딩 최적화 -->
+  <!-- SNS 인앱 브라우저 로딩 힌트 -->
   <link rel="preconnect" href="https://appverification.net" crossorigin>
   <link rel="dns-prefetch" href="//appverification.net">
 
@@ -18,6 +18,7 @@
   <meta property="og:image" content="https://dummyimage.com/1200x630/eff2f6/111&text=3min+Checklist">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Favicon (간단 SVG 데이터) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2742%27 fill=%27%2300c2ff%27/%3E%3Ctext x=%2750%27 y=%2758%27 text-anchor=%27middle%27 font-size=%2752%27 fill=%27white%27 font-family=%27Arial,sans-serif%27%3ED%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="./styles.css" />
@@ -33,7 +34,10 @@
         <a href="#faq">FAQ</a>
         <a href="#policy">원칙</a>
       </nav>
-      <a class="btn primary hide-sm" id="primary-cta-top" target="_blank" rel="nofollow noopener noreferrer">오늘의 체크리스트</a>
+      <!-- 상단 CTA (데스크톱) -->
+      <a class="btn primary hide-sm" id="primary-cta-top"
+         href="https://appverification.net/cl/i/kld9we"
+         target="_blank" rel="nofollow noopener noreferrer">오늘의 체크리스트</a>
     </div>
   </header>
 
@@ -45,7 +49,6 @@
           <h1>광고 없이, 실행만 남기는 <span class="underline">3분 체크리스트</span></h1>
           <p class="sub">SNS에서 오신 분들을 위해, 오늘 바로 해볼 수 있는 것만 간단히 정리했어요.</p>
 
-          <!-- 신뢰/정책 친화형 하이라이트 -->
           <ul class="highlights">
             <li>✔ 과장/허위 없음 · 참여 조건·리스크는 함께 표기</li>
             <li>✔ 데이터 최소 수집 · 언제든 구독 해지 가능</li>
@@ -61,23 +64,11 @@
           <p class="micro">* 클릭 시 외부 페이지로 이동합니다. 국가/기기별 참여 가능 여부가 다를 수 있어요.</p>
         </div>
 
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 400 300">
-            <defs>
-              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="var(--accent-a)"/>
-                <stop offset="100%" stop-color="var(--accent-b)"/>
-              </linearGradient>
-            </defs>
-            <rect x="0" y="0" width="400" height="300" rx="24" fill="url(#g)" opacity="0.15"/>
-            <g transform="translate(40,40)">
-              <rect width="120" height="80" rx="12" class="card"/>
-              <rect x="150" width="80" height="80" rx="12" class="card"/>
-              <rect y="100" width="90" height="60" rx="10" class="card"/>
-              <rect x="110" y="100" width="120" height="60" rx="10" class="card"/>
-              <rect x="240" y="100" width="80" height="60" rx="10" class="card"/>
-            </g>
-          </svg>
+        <!-- ▶ 파란 칸 → 제품 이미지로 교체 (루트의 mockup-phone.jpg 사용) -->
+        <div class="hero-art">
+          <img src="mockup-phone.jpg"
+               alt="작업 테이블 위 스마트폰 목업"
+               style="max-width:100%; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.15);">
         </div>
       </div>
     </section>
@@ -103,7 +94,7 @@
       </div>
     </section>
 
-    <!-- Email collection (Netlify Forms) -->
+    <!-- Email (Netlify Forms) -->
     <section id="signup" class="section">
       <div class="container">
         <h2>주간 요약 메일로 받아보기 (선택)</h2>
@@ -158,7 +149,7 @@
     </div>
   </footer>
 
-  <!-- 모바일 스티키 바: 인앱 브라우저에서 클릭률↑ -->
+  <!-- 모바일 스티키 바 (인앱 브라우저에서 클릭률↑) -->
   <div class="sticky-cta" id="sticky-cta">
     <button class="btn primary wide" id="primary-cta-sticky">체크리스트 열기</button>
   </div>
@@ -166,5 +157,3 @@
   <script src="./script.js" defer></script>
 </body>
 </html>
-
-
