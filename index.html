@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Minimal – 실전 인사이트 큐레이션</title>
+  <meta name="description" content="광고 느낌 없이, 오늘 바로 도움이 되는 한 페이지 요약. 매일 3분, 실행에 필요한 핵심만 전합니다." />
+  <link rel="canonical" href="https://example.netlify.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Daily Minimal – 실전 인사이트 큐레이션" />
+  <meta property="og:description" content="광고·과장 없이 실행만 남기는 3분 요약." />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/eeeeee/111111&text=Daily+Minimal" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#">Daily Minimal</a>
+      <nav class="site-nav">
+        <a href="#topics">토픽</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">연락</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>광고 없이, 실행만 남기는 <span class="underline">3분 요약</span></h1>
+          <p class="sub">트렌드 노이즈를 걷어내고 오늘 바로 쓸 수 있는 전략만 모아 전달합니다.</p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#" id="primary-cta" target="_blank" rel="noopener">오늘의 체크리스트 보기</a>
+            <a class="btn ghost" href="#signup">주간 큐레이션 받기</a>
+          </div>
+          <p class="micro">스팸/광고성 메시지 없이 핵심만 드려요.</p>
+        </div>
+
+        <!-- Hero visual (SVG, 이미지 없이도 가벼움) -->
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 400 300" role="img">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="var(--accent-a)"/>
+                <stop offset="100%" stop-color="var(--accent-b)"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="400" height="300" rx="24" fill="url(#g)" opacity="0.15"/>
+            <g transform="translate(40,40)">
+              <rect width="120" height="80" rx="12" class="card"/>
+              <rect x="150" width="80" height="80" rx="12" class="card"/>
+              <rect y="100" width="90" height="60" rx="10" class="card"/>
+              <rect x="110" y="100" width="120" height="60" rx="10" class="card"/>
+              <rect x="240" y="100" width="80" height="60" rx="10" class="card"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Topics -->
+    <section id="topics" class="section">
+      <div class="container">
+        <h2>이번 주 다루는 토픽</h2>
+        <ul class="grid">
+          <li class="card-soft">
+            <h3>짧은 영상, 오래 남는 가치</h3>
+            <p>조회수보다 <strong>반복 재생 유도 구조</strong>에 집중하는 틱톡/릴스 포맷.</p>
+            <a class="link" href="#" target="_blank" rel="noopener">아웃라인 보기 →</a>
+          </li>
+          <li class="card-soft">
+            <h3>랜딩 카피 최소주의</h3>
+            <p>광고 같지 않게 설득하는 <strong>톤 & 마이크로카피</strong> 체크리스트.</p>
+            <a class="link" href="#" target="_blank" rel="noopener">체크리스트 →</a>
+          </li>
+          <li class="card-soft">
+            <h3>데이터 없는 초기 CTR 개선</h3>
+            <p>썸네일/첫 문장/첫 3초에만 리소스 집중하는 방법.</p>
+            <a class="link" href="#" target="_blank" rel="noopener">가이드 →</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Value-first banner -->
+    <section class="strip">
+      <div class="container strip-inner">
+        <p>우리는 “지금 바로 해볼 수 있는 것”만 소개합니다. 추천 링크가 있을 땐 <em>이유</em>와 <em>리스크</em>를 함께 적습니다.</p>
+        <a class="btn tiny" href="#faq">원칙 보기</a>
+      </div>
+    </section>
+
+    <!-- Email (Netlify Forms 사용, 백엔드 없이 제출 수집) -->
+    <section id="signup" class="section">
+      <div class="container">
+        <h2>주간 큐레이션 받아보기</h2>
+        <form name="signup" method="POST" data-netlify="true" class="form-card">
+          <input type="hidden" name="form-name" value="signup" />
+          <label class="field">
+            <span>이메일</span>
+            <input required type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <label class="field">
+            <span>관심 분야 (선택)</span>
+            <select name="topic">
+              <option>틱톡/릴스</option>
+              <option>블로그/SEO</option>
+              <option>CPA/제휴</option>
+              <option>자동화</option>
+            </select>
+          </label>
+          <button class="btn primary" type="submit">구독 신청</button>
+          <p class="micro">제출 시 개인정보 처리방침에 동의한 것으로 간주됩니다.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>자주 묻는 질문</h2>
+        <details class="faq">
+          <summary>광고/스폰서십이 있나요?</summary>
+          <p>있다면 명확히 표기하고, 대가와 추천 이유를 함께 공개합니다.</p>
+        </details>
+        <details class="faq">
+          <summary>유료 전환을 강요하나요?</summary>
+          <p>아니요. 무료로도 실행 가능한 경로를 우선 제공합니다.</p>
+        </details>
+        <details class="faq">
+          <summary>자료의 출처는 어떻게 관리하나요?</summary>
+          <p>가능한 1차 출처를 우선하고, 추정은 추정으로 표기합니다.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container foot">
+      <p>© <span id="y"></span> Daily Minimal · <a href="#" class="link">개인정보 처리방침</a></p>
+      <div class="links">
+        <a class="link" href="#" target="_blank" rel="noopener">노션 자료집</a>
+        <a class="link" href="#" target="_blank" rel="noopener">문의</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
